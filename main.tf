@@ -72,6 +72,10 @@ resource "aws_instance" "docker_instance" {
     Name = var.cluster_name
   }
 
+  credit_specification {
+    cpu_credits = var.instance_cpu_credits
+  }
+
   provisioner "remote-exec" {
     scripts = [
       "${path.module}/scripts/init-web-instance.sh",

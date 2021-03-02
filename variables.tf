@@ -8,6 +8,12 @@ variable "instance_type" {
   type = string
 }
 
+variable "instance_cpu_credits" {
+  description = "Credit option for CPU usage"
+  type = string
+  default = "standard"
+}
+
 variable "aws_key_pair_name" {
   description = "Name of your Key Pair. Please create it in AWS console."
 }
