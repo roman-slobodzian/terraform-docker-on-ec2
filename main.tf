@@ -84,7 +84,7 @@ resource "aws_instance" "docker_instance" {
 
   root_block_device {
     volume_type = "gp2"
-    volume_size = "15"
+    volume_size = var.instance_volume_size
     delete_on_termination = true
   }
 
